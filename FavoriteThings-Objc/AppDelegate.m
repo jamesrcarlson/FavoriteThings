@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "FavortiesViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +19,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    /*
+     //longer method
+     
+     
+     FavortiesViewController *viewController = [[FavortiesViewController alloc] init];
+     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+     self.window.rootViewController = navigationController;
+     
+     */
+    
+//    FavortiesViewController *viewController = [FavortiesViewController new];
+//    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+//    self.window.rootViewController = navigationController;
+
+    //shorter method
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[FavortiesViewController new]];
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
